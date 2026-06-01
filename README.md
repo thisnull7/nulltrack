@@ -42,13 +42,19 @@
 
 ### Step 1 — Clone Repository
 
-git clone https://github.com/thisnull7/nulltrack.git
+git clone https://github.com/thisnull7/nulltrack
+
 cd nulltrack
+
 python -m pip isntall requests
+
 python -m pip isntall colorama
+
 python -m pip isntall pyfiglet
 
+
 run
+
 python track.py
 
 What Happens When You Run:
