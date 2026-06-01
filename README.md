@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/github/forks/thisnull7/nulltrack?style=social" />
 </p>
 
-# NULLTRACK v1.0
+# NULLTRACK 
 
 **NULLTRACK** is a precision geolocation framework designed for educational security research. It generates a convincing Google Maps delivery verification page that requests GPS access from visitors. When permission is granted, precise coordinates, device fingerprints, and network information are captured in real-time. The tool includes a multi-tunnel system (Cloudflared, Serveo, localhost.run) to expose your local server publicly without port forwarding.
 
