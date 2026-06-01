@@ -46,11 +46,11 @@ git clone https://github.com/thisnull7/nulltrack
 
 cd nulltrack
 
-python -m pip isntall requests
+python -m pip install requests
 
-python -m pip isntall colorama
+python -m pip install colorama
 
-python -m pip isntall pyfiglet
+python -m pip install pyfiglet
 
 
 run
