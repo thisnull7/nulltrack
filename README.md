@@ -32,7 +32,7 @@
 - Auto-install dependencies with graceful fallbacks if colorama/pyfiglet missing
 - Clean modern terminal interface with spinner animations, section headers, color-coded output
 
-## 🚀 Installation
+## 🚀 Installation For Command Prompt (CMD)
 
 ### Prerequisites
 
