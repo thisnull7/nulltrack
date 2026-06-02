@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/github/stars/thisnull7/nulltrack?style=social" />
   <img src="https://img.shields.io/github/forks/thisnull7/nulltrack?style=social" />
 </p>
-# NULLTRACK PRIVIEW
+
 ![NULLTRACK Preview](https://raw.githubusercontent.com/thisnull7/nulltrack/refs/heads/main/track.png)
 
 # NULLTRACK 
